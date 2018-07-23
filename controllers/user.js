@@ -35,7 +35,7 @@ module.exports = {
                     id: resultInput._id,
                     name: resultInput.name,
                     email: resultInput.email,
-                    image: resultInput.images,
+                    image: resultInput.image,
                     tokenUser
                   })
               })
@@ -47,18 +47,18 @@ module.exports = {
               })
           } else {
             let tokenUser = jwt.sign({
-              id: resultInput._id,
-              name: resultInput.name,
-              email: resultInput.email
+              id: userData._id,
+              name: userData.name,
+              email: userData.email
             }, process.env.SECRET_TOKEN)
 
             res
               .status(200)
               .json({
-                id: resultInput._id,
-                name: resultInput.name,
-                email: resultInput.email,
-                image: resultInput.images,
+                id: userData._id,
+                name: userData.name,
+                email: userData.email,
+                image: userData.image,
                 tokenUser
               })
           }
