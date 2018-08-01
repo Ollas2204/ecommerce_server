@@ -23,7 +23,7 @@ module.exports = {
               })
 
               .then(resultInput => {
-                let tokenUser = jwt.sign({
+                let token = jwt.sign({
                   id: resultInput._id,
                   name: resultInput.name,
                   email: resultInput.email
@@ -36,7 +36,7 @@ module.exports = {
                     name: resultInput.name,
                     email: resultInput.email,
                     image: resultInput.image,
-                    tokenUser
+                    token
                   })
               })
 
@@ -46,7 +46,7 @@ module.exports = {
                   .json(err)
               })
           } else {
-            let tokenUser = jwt.sign({
+            let token = jwt.sign({
               id: userData._id,
               name: userData.name,
               email: userData.email
@@ -59,7 +59,7 @@ module.exports = {
                 name: userData.name,
                 email: userData.email,
                 image: userData.image,
-                tokenUser
+                token
               })
           }
         })

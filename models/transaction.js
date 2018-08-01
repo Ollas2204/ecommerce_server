@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const transactionSchema = new Schema({
   UserId        : { type: Schema.Types.ObjectId, ref: 'user'},
   Ecommerce   : [{
-    EcommerceId: { type: Schema.Types.ObjectId, ref: 'ecommerce'},
+    title: String,
+    category: String,
     total : Number
   }],
   totalPrice : Number

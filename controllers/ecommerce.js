@@ -16,6 +16,7 @@ module.exports = {
       description : req.body.description,
       image : req.file.cloudStoragePublicUrl,
       price : req.body.price,
+      category: req.body.category
     })
     .then(ecommerce => {
       res.status(201).json({
@@ -35,6 +36,7 @@ module.exports = {
       description : req.body.description,
       image : req.file.cloudStoragePublicUrl,
       price : req.body.price,
+      category: req.body.category
     })
     .then(ecommerce => {
       res.status(201).json({

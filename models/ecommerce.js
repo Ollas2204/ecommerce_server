@@ -5,6 +5,7 @@ const ecommerceSchema = new Schema({
   title         : String,
   description   : String,
   image         : String,
+  category      : String,
   price         : Number,
 }, {
   timestamps : true
